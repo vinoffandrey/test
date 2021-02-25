@@ -1,0 +1,459 @@
+/*==========================================Стандартное обнуление=========================================*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	overflow-x: hidden;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+}
+
+/*==========================================Подключение шрифтов=========================================*/
+@font-face {
+	font-family: "Times New Roman";
+	src: url("../assets/fonts/times-new-roman.ttf");
+}
+@font-face {
+	font-family: "Times New Roman Bold";
+	src: url("../assets/fonts/Times\ new\ roman\ bold.ttf");
+}
+/*==========================================Верхняя часть=========================================*/
+input {
+	border-bottom: 1px solid #000;
+	padding: 0 15px;
+	font-family: "Times New Roman";
+	font-size: 16px;
+}
+.main {
+	&__container {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 0 20px 40px 20px;
+	}
+}
+.top {
+	&__image {
+		text-align: center;
+		img {
+			max-width: 300px;
+			height: auto;
+		}
+	}
+	&__line {
+		display: flex;
+		@media (max-width: 650px) {
+			flex-wrap: wrap;
+		}
+	}
+	&__line-left {
+		display: flex;
+		flex: 0 1 40%;
+		align-items: flex-end;
+		@media (max-width: 650px) {
+			flex: 1 1 100%;
+			input {
+				flex: 1 1 auto;
+			}
+		}
+		p {
+			margin: 0;
+			font-family: "Times New Roman";
+			font-size: 17px;
+			color: #000;
+		}
+	}
+	&__line-right {
+		display: flex;
+		flex: 0 1 60%;
+		align-items: flex-end;
+		@media (max-width: 650px) {
+			flex: 1 1 100%;
+			margin: 20px 0 0 0;
+			flex-wrap: wrap;
+			input {
+				flex: 1 1 auto;
+			}
+		}
+		p {
+			margin: 0;
+			font-family: "Times New Roman";
+			font-size: 17px;
+			color: #000;
+			span {
+				font-size: 13px;
+				margin: 0 0 0 5px;
+			}
+		}
+	}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__left {
+		flex: 1 1 auto;
+		@media (max-width: 650px) {
+			flex: 1 1 auto;
+		}
+	}
+
+	&__item {
+		display: flex;
+		margin: 20px 0;
+		@media (max-width: 650px) {
+			flex-wrap: wrap;
+			margin: 20px 0 0 0;
+		}
+		p {
+			margin: 0;
+			font-family: "Times New Roman Bold";
+			font-size: 17px;
+			color: #000;
+			span {
+				font-size: 13px;
+				margin: 0 0 0 5px;
+				font-family: "Times New Roman";
+			}
+		}
+		input {
+			max-width: 100px;
+			font-family: "Times New Roman";
+			@media (max-width: 650px) {
+				flex: 1 1 auto;
+				max-width: none;
+			}
+		}
+		&.last {
+			input {
+				max-width: 200px;
+				font-family: "Times New Roman";
+				@media (max-width: 650px) {
+					flex: 1 1 auto;
+					max-width: none;
+				}
+			}
+		}
+	}
+
+	&__item-li {
+		display: flex;
+		align-items: flex-end;
+		@media (max-width: 650px) {
+			flex: 1 1 100%;
+			margin: 0 0 20px 0;
+			&:last-child {
+				margin: 0;
+			}
+		}
+		p {
+			flex: 1 1 auto;
+			font-family: "Times New Roman";
+			font-size: 16px;
+			color: #000;
+			@media (max-width: 650px) {
+				flex: 0 1 auto;
+			}
+			span {
+				font-size: 13px;
+				margin: 0 0 0 5px;
+			}
+		}
+		input {
+			max-width: 100px;
+			font-family: "Times New Roman";
+			@media (max-width: 650px) {
+				flex: 1 1 auto;
+				max-width: none;
+			}
+		}
+	}
+
+	&__title {
+		font-family: "Times New Roman Bold";
+		text-transform: uppercase;
+		font-size: 20px;
+		color: #000;
+		float: right;
+		margin: 5px 0 0 0;
+		@media (max-width: 650px) {
+			text-align: center;
+			float: none;
+			margin: 20px 0;
+		}
+	}
+
+	&__right {
+		background: url("../assets/img/para.png") 0 0 / 100% no-repeat;
+		background-size: contain;
+		background-position: right;
+		height: 220px;
+		flex: 0 1 220px;
+		@media (max-width: 650px) {
+			background: none;
+			flex: 0 1 auto;
+		}
+	}
+}
+
+/*==========================================Центральная часть=========================================*/
+
+.center {
+	&__title {
+		width: 100%;
+		padding: 5px;
+		font-family: "Times New Roman Bold";
+		text-transform: uppercase;
+		font-size: 20px;
+		color: #000;
+		text-align: center;
+		border: 2px solid #000;
+		position: relative;
+		input {
+			max-width: 80px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		margin: 20px 0;
+		align-items: flex-end;
+		@media (max-width: 650px) {
+			flex-wrap: wrap;
+		}
+		span {
+			font-size: 14px;
+			margin: 0 0 0 5px;
+			font-family: "Times New Roman";
+			display: flex;
+			align-items: flex-end;
+		}
+		p {
+			margin: 0;
+			font-family: "Times New Roman Bold";
+			font-size: 17px;
+			color: #000;
+			display: flex;
+			align-items: flex-end;
+			span {
+				font-size: 13px;
+				margin: 0 0 0 5px;
+				font-family: "Times New Roman";
+			}
+		}
+		input {
+			font-family: "Times New Roman";
+		}
+		&-top {
+			flex-wrap: wrap;
+			font-family: "Times New Roman";
+			font-size: 17px;
+			input {
+				display: block;
+				width: 100%;
+				margin: 5px 0 0;
+			}
+		}
+		&-full {
+			input {
+				flex: 1 1 auto;
+			}
+		}
+		&.last {
+			p {
+				display: flex;
+				flex-direction: column;
+			}
+			input {
+				max-width: 200px;
+				font-family: "Times New Roman";
+			}
+		}
+		.top__item-li {
+			flex: 1 1 auto;
+			@media (max-width: 650px) {
+				flex-wrap: wrap;
+			}
+			@media (max-width: 780px) {
+				display: flex;
+				justify-content: flex-start;
+			}
+			input {
+				max-width: 120px;
+				@media (max-width: 780px) {
+					max-width: 50px;
+				}
+				@media (max-width: 650px) {
+					max-width: none;
+					flex: 1 1 auto;
+				}
+			}
+		}
+	}
+}
+
+/*==========================================Нижняя часть=========================================*/
+
+.bottom {
+	&__line {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 650px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__left {
+		display: flex;
+		@media (max-width: 650px) {
+			flex: 1 1 auto;
+		}
+		input {
+			max-width: 130px;
+			@media (max-width: 650px) {
+				max-width: none;
+				flex: 1 1 auto;
+			}
+		}
+		p {
+			margin: 0;
+			font-family: "Times New Roman Bold";
+			font-size: 19px;
+			color: #000;
+			display: flex;
+			align-items: flex-end;
+			span {
+				font-size: 15px;
+				margin: 0 0 0 5px;
+				font-family: "Times New Roman Bold";
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+		@media (max-width: 650px) {
+			margin: 20px 0 0 0;
+		}
+		p {
+			margin: 0;
+			font-family: "Times New Roman Bold";
+			font-size: 19px;
+			color: #000;
+			display: flex;
+			align-items: flex-end;
+		}
+	}
+}
+
+/*==========================================Таблица=========================================*/
+
+.tabl {
+	&__body {
+		margin: 20px 0 0 0;
+		.line__title {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			border: 1px solid #000;
+			border-bottom: none;
+			@media (max-width: 650px) {
+				padding: 10px 20px;
+				flex-wrap: wrap;
+			}
+			input {
+				margin: 0 0 5px 0;
+				@media (max-width: 650px) {
+					flex: 1 1 auto;
+				}
+			}
+		}
+	}
+	&__title {
+		font-family: "Times New Roman Bold";
+		font-size: 19px;
+		color: #000;
+	}
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	tr {
+		td {
+			border: 1px solid #000;
+			padding: 13px 30px;
+			@media (max-width: 415px) {
+				padding: 13px 20px;
+			}
+		}
+	}
+}

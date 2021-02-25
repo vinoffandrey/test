@@ -1,0 +1,685 @@
+@charset "UTF-8";
+/*==========================================Стандартное обнуление=========================================*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*==========================================Подключение шрифтов=========================================*/
+@font-face {
+  font-family: "Times New Roman";
+  src: url("../assets/fonts/times-new-roman.ttf");
+}
+
+@font-face {
+  font-family: "Times New Roman Bold";
+  src: url("../assets/fonts/Times new roman bold.ttf");
+}
+
+/*==========================================Верхняя часть=========================================*/
+input {
+  border-bottom: 1px solid #000;
+  padding: 0 15px;
+  font-family: "Times New Roman";
+  font-size: 16px;
+}
+
+.main__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+}
+
+.top__image {
+  text-align: center;
+}
+
+.top__image img {
+  max-width: 300px;
+  height: auto;
+}
+
+.top__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .top__line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.top__line-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 650px) {
+  .top__line-left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+  .top__line-left input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+.top__line-left p {
+  margin: 0;
+  font-family: "Times New Roman";
+  font-size: 17px;
+  color: #000;
+}
+
+.top__line-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 650px) {
+  .top__line-right {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin: 20px 0 0 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .top__line-right input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+.top__line-right p {
+  margin: 0;
+  font-family: "Times New Roman";
+  font-size: 17px;
+  color: #000;
+}
+
+.top__line-right p span {
+  font-size: 13px;
+  margin: 0 0 0 5px;
+}
+
+.top__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top__left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+@media (max-width: 650px) {
+  .top__left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+.top__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0;
+}
+
+@media (max-width: 650px) {
+  .top__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 20px 0 0 0;
+  }
+}
+
+.top__item p {
+  margin: 0;
+  font-family: "Times New Roman Bold";
+  font-size: 17px;
+  color: #000;
+}
+
+.top__item p span {
+  font-size: 13px;
+  margin: 0 0 0 5px;
+  font-family: "Times New Roman";
+}
+
+.top__item input {
+  max-width: 100px;
+  font-family: "Times New Roman";
+}
+
+@media (max-width: 650px) {
+  .top__item input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: none;
+  }
+}
+
+.top__item.last input {
+  max-width: 200px;
+  font-family: "Times New Roman";
+}
+
+@media (max-width: 650px) {
+  .top__item.last input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: none;
+  }
+}
+
+.top__item-li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 650px) {
+  .top__item-li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin: 0 0 20px 0;
+  }
+  .top__item-li:last-child {
+    margin: 0;
+  }
+}
+
+.top__item-li p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  font-family: "Times New Roman";
+  font-size: 16px;
+  color: #000;
+}
+
+@media (max-width: 650px) {
+  .top__item-li p {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+}
+
+.top__item-li p span {
+  font-size: 13px;
+  margin: 0 0 0 5px;
+}
+
+.top__item-li input {
+  max-width: 100px;
+  font-family: "Times New Roman";
+}
+
+@media (max-width: 650px) {
+  .top__item-li input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: none;
+  }
+}
+
+.top__title {
+  font-family: "Times New Roman Bold";
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #000;
+  float: right;
+  margin: 5px 0 0 0;
+}
+
+@media (max-width: 650px) {
+  .top__title {
+    text-align: center;
+    float: none;
+    margin: 20px 0;
+  }
+}
+
+.top__right {
+  background: url("../assets/img/para.png") 0 0/100% no-repeat;
+  background-size: contain;
+  background-position: right;
+  height: 220px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 220px;
+          flex: 0 1 220px;
+}
+
+@media (max-width: 650px) {
+  .top__right {
+    background: none;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+}
+
+/*==========================================Центральная часть=========================================*/
+.center__title {
+  width: 100%;
+  padding: 5px;
+  font-family: "Times New Roman Bold";
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  border: 2px solid #000;
+  position: relative;
+}
+
+.center__title input {
+  max-width: 80px;
+}
+
+.center__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (max-width: 650px) {
+  .center__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.center__item span {
+  font-size: 14px;
+  margin: 0 0 0 5px;
+  font-family: "Times New Roman";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.center__item p {
+  margin: 0;
+  font-family: "Times New Roman Bold";
+  font-size: 17px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.center__item p span {
+  font-size: 13px;
+  margin: 0 0 0 5px;
+  font-family: "Times New Roman";
+}
+
+.center__item input {
+  font-family: "Times New Roman";
+}
+
+.center__item-top {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "Times New Roman";
+  font-size: 17px;
+}
+
+.center__item-top input {
+  display: block;
+  width: 100%;
+  margin: 5px 0 0;
+}
+
+.center__item-full input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.center__item.last p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.center__item.last input {
+  max-width: 200px;
+  font-family: "Times New Roman";
+}
+
+.center__item .top__item-li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+@media (max-width: 650px) {
+  .center__item .top__item-li {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 780px) {
+  .center__item .top__item-li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.center__item .top__item-li input {
+  max-width: 120px;
+}
+
+@media (max-width: 780px) {
+  .center__item .top__item-li input {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  .center__item .top__item-li input {
+    max-width: none;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+/*==========================================Нижняя часть=========================================*/
+.bottom__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 650px) {
+  .bottom__line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.bottom__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .bottom__left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+.bottom__left input {
+  max-width: 130px;
+}
+
+@media (max-width: 650px) {
+  .bottom__left input {
+    max-width: none;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+.bottom__left p {
+  margin: 0;
+  font-family: "Times New Roman Bold";
+  font-size: 19px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.bottom__left p span {
+  font-size: 15px;
+  margin: 0 0 0 5px;
+  font-family: "Times New Roman Bold";
+}
+
+.bottom__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 650px) {
+  .bottom__right {
+    margin: 20px 0 0 0;
+  }
+}
+
+.bottom__right p {
+  margin: 0;
+  font-family: "Times New Roman Bold";
+  font-size: 19px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/*==========================================Таблица=========================================*/
+.tabl__body {
+  margin: 20px 0 0 0;
+}
+
+.tabl__body .line__title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+@media (max-width: 650px) {
+  .tabl__body .line__title {
+    padding: 10px 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.tabl__body .line__title input {
+  margin: 0 0 5px 0;
+}
+
+@media (max-width: 650px) {
+  .tabl__body .line__title input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+}
+
+.tabl__title {
+  font-family: "Times New Roman Bold";
+  font-size: 19px;
+  color: #000;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr td {
+  border: 1px solid #000;
+  padding: 13px 30px;
+}
+
+@media (max-width: 415px) {
+  table tr td {
+    padding: 13px 20px;
+  }
+}
